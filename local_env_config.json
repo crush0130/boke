@@ -1,0 +1,10 @@
+{
+
+  "node_features": 256,
+  "num_attention_heads": 12,
+  "num_encoder_layers": 3,
+  "num_hidden_layers": 12,
+  "edge_features": 256,
+  "k_neighbors": 20,
+  "hidden_dim": 256
+}
