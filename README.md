@@ -103,25 +103,25 @@ python ~/projects/foldingdiff/bin/omegafold_across_gpus.py proteinmpnn_residues/
 ### Binding Pocket Detection and Selection
 Potential ligand-binding pockets were identified using **Fpocket**.
 
-- Pockets with **druggability score > 0.5** and **volume > 200 Å³** were selected
-- A total of **62 candidate pockets** were obtained
-- These pockets were further **clustered into three groups**
-- Representative pockets were selected for subsequent molecular docking analysis
+Pockets with **druggability score > 0.5** and **volume > 200 Å³** were selected
+A total of **62 candidate pockets** were obtained
+These pockets were further **clustered into three groups**
+Representative pockets were selected for subsequent molecular docking analysis
 
 
 ### Ligand Selection and Molecular Docking
 Candidate small molecules were retrieved from the **ChEMBL database** based on:
 
-- Spatial proximity to the predicted pockets
-- Physicochemical properties of the binding pockets
+Spatial proximity to the predicted pockets
+Physicochemical properties of the binding pockets
 
 #### Protein and Ligand Preparation
 Prior to docking:
 
-- Water molecules were removed
-- Polar hydrogen atoms were added
-- **Gasteiger charges** were assigned
-- Both receptor and ligand structures were converted to **PDBQT format**
+Water molecules were removed
+Polar hydrogen atoms were added
+**Gasteiger charges** were assigned
+Both receptor and ligand structures were converted to **PDBQT format**
 
 #### Docking Procedure
 Molecular docking was performed using **AutoDock Vina** to evaluate binding affinity and generate protein–ligand complex structures.
@@ -132,11 +132,11 @@ The resulting complexes were analyzed using **PLIP (Protein–Ligand Interaction
 
 PLIP automatically identifies key non-covalent interactions, including:
 
-- Hydrogen bonds
-- Hydrophobic interactions
-- π–π stacking
-- Cation–π interactions
-- Salt bridges
+Hydrogen bonds
+Hydrophobic interactions
+π–π stacking
+Cation–π interactions
+Salt bridges
 
 It also generates both **3D binding mode visualizations** and **2D interaction diagrams**, enabling detailed analysis of key binding residues and interaction patterns.
 
@@ -145,8 +145,8 @@ It also generates both **3D binding mode visualizations** and **2D interaction d
 ### ADMET Evaluation
 To assess the drug-likeness and safety of selected ligands:
 
-- **ADMET properties** (absorption, distribution, metabolism, excretion, and toxicity) were predicted
-- Promising candidates were further evaluated based on their pharmacokinetic profiles and potential toxicity risks
+**ADMET properties** (absorption, distribution, metabolism, excretion, and toxicity) were predicted
+Promising candidates were further evaluated based on their pharmacokinetic profiles and potential toxicity risks
 
 
 ## Summary
