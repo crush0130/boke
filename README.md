@@ -94,7 +94,7 @@ After creating and activating a separate conda environment and following the aut
 
 ```bash
 # Fold each fasta, spreading the work over GPUs 0 and 1, outputs to omegafold_predictions folder
-python ~/projects/foldingdiff/bin/omegafold_across_gpus.py proteinmpnn_residues/*.fasta -g 0 1
+python ~/bin/omegafold_across_gpus.py proteinmpnn_residues/*.fasta -g 0 1
 ```
 
 
