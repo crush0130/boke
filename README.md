@@ -46,7 +46,7 @@ To sample protein backbones, use the script `bin/sample.py`. Example commands to
 
 ```bash
 # To sample 10 backbones per length ranging from [50, 128) with a batch size of 512 - reproduces results in our manuscript
-python sample.py -l 50 128 -n 10 -b 512 --device cuda:0
+python ~/bin/sample.py -l 50 128 -n 10 -b 512 --device cuda:0
 ```
 
 This will run the trained model hosted at [wukevin/foldingdiff_cath](https://huggingface.co/wukevin/foldingdiff_cath) and generate sequences of varying lengths. If you wish to load the test dataset and include test chains in the generated plots, use the option `--testcomparison`; note that this requires downloading the CATH dataset, see above. Running `sample.py` will create the following directory structure in the diretory where it is run:
