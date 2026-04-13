@@ -27,7 +27,7 @@ To train your own model on the CATH dataset, use the script at `bin/train.py` in
 json config files under `config_jsons` (or write your own). An example usage of this is as follows:
 
 ```bash
-python bin/train.py cath_full_angles_cosine.json --dryrun
+python train.py cath_full_angles_cosine.json --dryrun
 ```
 
 By default, the training script will calculate the KL divergence at each timestep before starting training, which can be quite computationally expensive with more timesteps. To skip this, append the `--dryrun` flag. The output of the model will be in the `results` folder with the following major files present:
@@ -46,7 +46,7 @@ To sample protein backbones, use the script `bin/sample.py`. Example commands to
 
 ```bash
 # To sample 10 backbones per length ranging from [50, 128) with a batch size of 512 - reproduces results in our manuscript
-python ~/projects/foldingdiff/bin/sample.py -l 50 128 -n 10 -b 512 --device cuda:0
+python sample.py -l 50 128 -n 10 -b 512 --device cuda:0
 ```
 
 This will run the trained model hosted at [wukevin/foldingdiff_cath](https://huggingface.co/wukevin/foldingdiff_cath) and generate sequences of varying lengths. If you wish to load the test dataset and include test chains in the generated plots, use the option `--testcomparison`; note that this requires downloading the CATH dataset, see above. Running `sample.py` will create the following directory structure in the diretory where it is run:
@@ -79,7 +79,7 @@ To set up [ProteinMPNN](https://www.science.org/doi/10.1126/science.add2187), se
 After this, we follow a similar procedure as for ESM-IF1 (above) where we `cd` into the directory containing the `sampled_pdb` folder and run:
 
 ```bash
-python ~/projects/foldingdiff/bin/pdb_to_residue_proteinmpnn.py sampled_pdb
+python ~/bin/pdb_to_residue_proteinmpnn.py sampled_pdb
 ```
 
 This will create a new directory called `proteinmpnn_residues` containing 8 amino acid chains per sampled PDB structure.
